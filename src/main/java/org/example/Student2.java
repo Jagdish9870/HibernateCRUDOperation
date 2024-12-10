@@ -1,26 +1,28 @@
 package org.example;
 
+
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Student {
+public class Student2 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name, address,college_name, email;
-    public Student(int id, String name, String address, String college_name, String email) {
+    public Student2(int id, String name, String address, String college_name, String email) {
         this.id = id;
         this.name = name;
         this.address = address;
         this.college_name = college_name;
         this.email = email;
     }
-public Student(){
+    public Student2(){
 
-}
+    }
     public int getId() {
         return id;
     }
