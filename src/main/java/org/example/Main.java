@@ -36,17 +36,26 @@ public class Main {
 //        System.out.println(stuSingle);
        // System.out.println("data fetched successfully!");
 
-// third operation _> updating data
+//// third operation _> updating data
+//
+//        SessionFactory factory= HibernateUtil.getSessionfactory();
+//        Session session= factory.openSession();
+//        Transaction txn= session.beginTransaction();
+//        Student2 stUpdate= session.get(Student2.class,1);
+//        stUpdate.setName("madhur");
+//        stUpdate.setEmail("madhur.ac.in");
+//        System.out.println("data updated successfully!");
+//
+//        session.saveOrUpdate(stUpdate);
+//        txn.commit();
 
+// fourth operation -> deleting data
         SessionFactory factory= HibernateUtil.getSessionfactory();
         Session session= factory.openSession();
         Transaction txn= session.beginTransaction();
-        Student2 stUpdate= session.get(Student2.class,1);
-        stUpdate.setName("madhur");
-        stUpdate.setEmail("madhur.ac.in");
-        System.out.println("data updated successfully!");
-
-        session.save(stUpdate);
+        Student2 stDelete= session.get(Student2.class,2);
+        System.out.println("data deleted successfully!");
+        session.delete(stDelete);
         txn.commit();
         session.close();
         factory.close();
